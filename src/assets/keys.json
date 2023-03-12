@@ -1,6 +1,8 @@
 {
     "keys": [
-        { "number": "001", "available": true, "takenBy": "Sylwia Gruszka" },
-        { "number": "002", "available": true, "takenBy": "" }
+        { "name": "101", "floor": 0, "takenBy": "Andrzej Konieczny" },
+        { "name": "102", "floor": 0, "takenBy": null },
+        { "name": "201", "floor": 1, "takenBy": null },
+        { "name": "202", "floor": 1, "takenBy": "Sylwia Gruszka" }
     ]
 }

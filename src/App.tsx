@@ -1,9 +1,9 @@
 import { Key } from "./components/key";
+import { Keybox } from "./components/keybox";
 
 function App() {
     return <>
-        <Key name="123" available={true} />
-        <Key name="207" available={false} />
+        <Keybox></Keybox>
     </>;
 }
 
