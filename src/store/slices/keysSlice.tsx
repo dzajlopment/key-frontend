@@ -9,10 +9,18 @@ export const keysSlice = createSlice({
 	reducers: {
 		setKeys: (state, action) => {
 			state.keys = action.payload;
-		}
+		},
+		markKeyAsReturned: (state, action) => {
+			const key = state.keys.find(key => key.name === action.payload);
+
+			if (key)
+				key.takenBy = null;
+			else
+				console.error(`Key ${action.payload} not found`);
+		},
 	}
 });
 
-export const { setKeys } = keysSlice.actions;
+export const { setKeys, markKeyAsReturned } = keysSlice.actions;
 
 export default keysSlice.reducer;

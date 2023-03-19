@@ -1,5 +1,15 @@
+import { useAppDispatch } from "../hooks";
+import { markKeyAsReturned } from "../store/slices/keysSlice";
+
 export const Key = (props: { name: string, takenBy: string | null }) => {
-	return <div className="flex flex-col items-center">
+	const dispatch = useAppDispatch();
+
+	const returnKey = () => {
+		// TODO: Add a check if the user is allowed to mark the key as returned
+		dispatch(markKeyAsReturned(props.name));
+	};
+
+	return <div className="flex flex-col items-center cursor-pointer" onClick={returnKey}>
 		<svg width="50" height="115">
 			<path id="key"
 				d="
