@@ -1,10 +1,12 @@
-import { Key } from "./components/key";
+import { DataFetcher } from "./components/dataFetcher";
 import { Keybox } from "./components/keybox";
 
 function App() {
-    return <>
-        <Keybox></Keybox>
-    </>;
+	return (
+		<DataFetcher>
+			<Keybox></Keybox>
+		</DataFetcher>
+	);
 }
 
 export default App;
