@@ -2,12 +2,7 @@ import { useAppSelector } from '../hooks';
 import { Floor } from './floor';
 
 export const Keybox = () => {
-	// const [keys, setKeys] = useState([] as KeyModel[]);
 	const keys = useAppSelector((state) => state.keys.keys);
-
-	// useEffect(() => {
-	// 	setKeys(Keys.keys);
-	// }, []);
 
 	const basementKeys = keys.filter(key => key.floor === 0);
 	const firstFloorKeys = keys.filter(key => key.floor === 1);
