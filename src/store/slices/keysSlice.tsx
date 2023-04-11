@@ -18,9 +18,17 @@ export const keysSlice = createSlice({
 			else
 				console.error(`Key ${action.payload} not found`);
 		},
+		borrowKey: (state, action) => {
+			const key = state.keys.find(key => key.name === action.payload.name);
+
+			if (key)
+				key.takenBy = action.payload.teacherName;
+			else
+				console.error(`Key ${action.payload.keyName} not found`);
+		}
 	}
 });
 
-export const { setKeys, markKeyAsReturned } = keysSlice.actions;
+export const { setKeys, markKeyAsReturned, borrowKey } = keysSlice.actions;
 
 export default keysSlice.reducer;

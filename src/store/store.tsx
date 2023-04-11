@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import keysReducer from "./slices/keysSlice";
+import teacherReducer from "./slices/teachersSlice";
 
 const store = configureStore({
 	reducer: {
 		keys: keysReducer,
+		teachers: teacherReducer,
 	},
 });
 
